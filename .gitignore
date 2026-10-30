@@ -1,0 +1,42 @@
+# Original planning docs (kept locally for reference, not published)
+00_OVERVIEW.md
+01_ARCHITECTURE.md
+02_DATA_PLAN.md
+03_FEATURES_SPEC.md
+04_AGENT_SPEC.md
+05_RECOMMENDATION_ENGINE.md
+06_DATABASE_SCHEMA.md
+07_API_SPEC.md
+08_UI_UX_PLAN.md
+09_BUILD_ROADMAP.md
+10_CHALLENGES_AND_SOLUTIONS.md
+11_PROMPT_FOR_CODING_AGENT.md
+AGENT_CONTEXT.md
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local data (regenerable via the ingestion commands in README)
+data/bharat_twin.db
+data/raw/
+logs/
+
+# Secrets — never commit; backend/.env.example is the template
+.env
+.env.local
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Frontend build artifacts (static site has none, but just in case)
+node_modules/
+dist/
+
+# HF Spaces rejects PDFs; keep the original locally only
+AgentFeed_Agentic_Recommender_(6).pdf_compressed.pdf

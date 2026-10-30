@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f97316" />
+    <meta
+      name="description"
+      content="Bharat Career Twin is a transparent, steerable career network for India's next move."
+    />
+    <title>Bharat Career Twin · AgentFeed</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script defer src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="app-shell" id="appShell">
+      <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+        <div class="sidebar-brand">
+          <button class="brand-mark" data-route="landing" aria-label="Go to overview">
+            <span class="brand-spark"></span>
+            <span class="brand-orbit"></span>
+          </button>
+          <div class="brand-copy">
+            <strong>bharat<span>/</span>twin</strong>
+            <span>AgentFeed <i>beta</i></span>
+          </div>
+          <button class="icon-button sidebar-collapse" id="collapseSidebar" aria-label="Collapse sidebar" title="Collapse sidebar">
+            <span class="icon icon-chevron"></span>
+          </button>
+        </div>
+
+        <div class="sidebar-scroll">
+          <div class="nav-label">Workspace</div>
+          <nav class="nav-list" id="primaryNav"></nav>
+
+          <div class="nav-label nav-label-spaced">Control room</div>
+          <nav class="nav-list" id="secondaryNav"></nav>
+        </div>
+
+        <div class="sidebar-memory">
+          <div class="memory-orb"><span></span></div>
+          <div class="memory-copy">
+            <strong>Agent memory</strong>
+            <span><b class="live-dot"></b> steerable now</span>
+          </div>
+          <button class="icon-button" data-action="open-simulation" aria-label="Open simulation lab">
+            <span class="icon icon-sliders"></span>
+          </button>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="source-line"><span class="status-dot green"></span><span>freehire signal</span><b>23k</b></div>
+          <div class="source-line"><span class="status-dot orange"></span><span>schemes indexed</span><b>1.2k</b></div>
+          <div class="sidebar-footnote">Made for the next move, from Nagpur to everywhere.</div>
+        </div>
+      </aside>
+
+      <div class="app-main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-button mobile-menu" id="mobileMenu" aria-label="Open navigation">
+              <span class="icon icon-menu"></span>
+            </button>
+            <div class="breadcrumb" id="breadcrumb"><span>AgentFeed</span><span class="breadcrumb-slash">/</span><strong>Overview</strong></div>
+          </div>
+          <div class="topbar-actions">
+            <div class="agent-status"><span class="status-dot green"></span><span class="desktop-only">6 agents online</span><span class="mobile-only">online</span></div>
+            <button class="search-trigger" id="searchBtn" aria-label="Search">
+              <span class="icon icon-search"></span><span class="search-label">Search the network</span><kbd>⌘ K</kbd>
+            </button>
+            <button class="icon-button has-notification" id="bellBtn" aria-label="Open digest" title="Open digest">
+              <span class="icon icon-bell"></span><i></i>
+            </button>
+            <button class="language-toggle" id="langBtn" aria-label="Switch language"><span>EN</span><span class="language-divider">/</span><span>हि</span></button>
+            <button class="profile-button" data-route="profile" aria-label="Open profile"><span>SS</span><i></i></button>
+          </div>
+        </header>
+
+        <main class="page-wrap">
+          <section class="page landing-page active" data-page="landing">
+            <div class="landing-hero panel-surface">
+              <div class="perspective-grid" aria-hidden="true"></div>
+              <div class="warli-dots" aria-hidden="true"></div>
+              <div class="landing-hero-copy">
+                <div class="eyebrow"><span class="eyebrow-pulse"></span> Bharat's transparent career network <span class="eyebrow-tag">v2</span></div>
+                <h1>Naukri nahi.<br /><em>Poora career network.</em></h1>
+                <p class="hero-lede">Your resume becomes a living twin: it finds roles, schemes, peers and startup collaborators — then tells you exactly <strong>why</strong> they belong in your next move.</p>
+                <div class="hero-actions">
+                  <button class="button button-primary button-large" data-route="resume"><span class="icon icon-upload"></span> Build my twin <span class="button-arrow">↗</span></button>
+                  <button class="button button-quiet button-large" data-route="feed"><span class="icon icon-spark"></span> Explore the feed</button>
+                </div>
+                <div class="hero-proof"><span class="proof-avatars"><i>R</i><i>P</i><i>A</i><i>+</i></span><span><strong>500+ early builders</strong> are steering their signal</span></div>
+              </div>
+              <div class="hero-stage" aria-label="Career twin signals">
+                <div class="stage-glow"></div>
+                <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+                <div class="orbit-node node-top"><span class="node-icon">↗</span><b>ATS twin</b><small>82 / 100</small></div>
+                <div class="orbit-node node-right"><span class="node-icon">⌘</span><b>social graph</b><small>12 mutuals</small></div>
+                <div class="orbit-node node-bottom"><span class="node-icon">₹</span><b>schemes</b><small>92% eligible</small></div>
+                <div class="orbit-node node-left"><span class="node-icon">✦</span><b>skill gap</b><small>Docker → 94%</small></div>
+                <div class="twin-core"><div class="core-ring"></div><span class="core-kicker">YOUR</span><strong>TWIN</strong><span class="core-status"><i></i> learning from your steer</span></div>
+                <div class="stage-caption"><span class="signal-line"></span><span>relevance, with receipts</span></div>
+              </div>
+            </div>
+
+            <div class="metric-strip">
+              <div class="metric-item"><span class="metric-number">23k</span><span class="metric-label">live roles · freehire</span></div>
+              <div class="metric-item"><span class="metric-number">6</span><span class="metric-label">specialist agents</span></div>
+              <div class="metric-item"><span class="metric-number">100%</span><span class="metric-label">explainable matches</span></div>
+              <div class="metric-item metric-note"><span class="metric-signal"><i></i><i></i><i></i></span><span>built for India's many next moves</span></div>
+            </div>
+
+            <div class="landing-section-heading"><div><span class="section-kicker">A calmer way to move</span><h2>One feed. More agency.</h2></div><p>Borrow the best part of social feeds — relevance — and leave the black box behind.</p></div>
+            <div class="feature-preview-grid">
+              <article class="feature-preview preview-orange"><div class="feature-topline"><span class="feature-index">01</span><span class="mini-status">steerable</span></div><div class="feature-art feed-art"><span class="art-card art-card-a">more React · less sales</span><span class="art-card art-card-b">+ 18% relevance</span><span class="art-card art-card-c">why this post?</span><span class="art-cursor">✦</span></div><h3>Steer the signal</h3><p>Say “more product, less night shift” and watch the feed adapt without losing variety.</p><button class="text-button" data-route="feed">Open steer box <span>↗</span></button></article>
+              <article class="feature-preview preview-green"><div class="feature-topline"><span class="feature-index">02</span><span class="mini-status">explainable</span></div><div class="feature-art graph-art"><span class="graph-node gn-a">you</span><span class="graph-node gn-b">Priya</span><span class="graph-node gn-c">TCS</span><span class="graph-node gn-d">Docker</span><span class="graph-edge ge-a"></span><span class="graph-edge ge-b"></span><span class="graph-edge ge-c"></span></div><h3>See the path</h3><p>From a 20 km peer to a warm referral, every connection has a reason and a next step.</p><button class="text-button" data-route="peers">Meet your tribe <span>↗</span></button></article>
+              <article class="feature-preview preview-ink"><div class="feature-topline"><span class="feature-index">03</span><span class="mini-status">healthy by design</span></div><div class="feature-art meter-art"><div class="meter-arc"><span></span></div><div class="meter-copy"><b>72</b><small>diversity</small></div><span class="meter-pill">balanced</span></div><h3>Guard your attention</h3><p>MMR diversity keeps the feed from becoming an echo chamber. Your memory stays editable.</p><button class="text-button" data-action="open-simulation">Open control room <span>↗</span></button></article>
+            </div>
+
+            <div class="team-section">
+              <div class="landing-section-heading compact"><div><span class="section-kicker">The crew behind your next move</span><h2>Six agents. One point of view: yours.</h2></div><span class="auto-cycle"><i></i> auto-revealing</span></div>
+              <div class="team-reveal-grid" id="teamRevealGrid"></div>
+            </div>
+
+            <div class="workflow-panel panel-surface">
+              <div class="workflow-intro"><span class="section-kicker">From “what now?” to a clear next step</span><h2>Small signals, <em>better direction.</em></h2><p>The twin learns from explicit goals and lightweight feedback — likes, saves, hides, dwell — without pretending to know you better than you do.</p><button class="button button-dark" data-route="feed">See the live loop <span class="button-arrow">↗</span></button></div>
+              <div class="workflow-steps"><div class="workflow-step active"><span>01</span><b>Upload & map</b><p>Resume, interests, city — one calm onboarding.</p></div><div class="workflow-connector"></div><div class="workflow-step"><span>02</span><b>Steer & explore</b><p>Tell the feed what to turn up or turn down.</p></div><div class="workflow-connector"></div><div class="workflow-step"><span>03</span><b>Move with proof</b><p>Apply, connect or close the next skill gap.</p></div></div>
+            </div>
+          </section>
+
+          <section class="page" data-page="feed">
+            <div class="page-heading feed-heading"><div><div class="section-kicker">Thursday · 22 October · Nagpur</div><h1>Your next move, <em>explained.</em></h1><p>Fresh signals from your interests, network and the wider Bharat job graph.</p></div><div class="heading-actions"><button class="button button-quiet" data-action="open-simulation"><span class="icon icon-sliders"></span> Control room</button><button class="button button-primary" data-route="resume"><span class="icon icon-upload"></span> Update twin</button></div></div>
+            <div class="steer-panel panel-surface"><div class="steer-label"><span class="steer-icon">⌁</span><div><span class="section-kicker">Steer box</span><strong>Give the agent a direction</strong></div></div><div class="steer-input-wrap"><input id="steerInput" value="more coding roles, less night shift" aria-label="Steer your feed" /><button id="steerSubmit" class="button button-dark">Apply steer <span>↗</span></button></div><div class="steer-suggestions"><span>Try:</span><button data-steer="more roles near Nagpur">more near me</button><button data-steer="show me govt schemes">show schemes</button><button data-steer="more women in tech peers">find my tribe</button><button data-steer="more startup ideas">startup mode</button></div><div class="steer-feedback" id="steerFeedback"><i></i><span>Agent memory updated · feed is 18% more local</span></div></div>
+            <div class="focus-row"><span class="focus-label">Focus mode</span><button class="focus-pill active" data-focus="career"><span>↗</span> Career</button><button class="focus-pill" data-focus="study"><span>◒</span> Study</button><button class="focus-pill" data-focus="relax"><span>◌</span> Reset</button><span class="focus-note" id="focusNote">Balanced for your next job move</span></div>
+            <div class="feed-layout"><div class="feed-main"><div class="stories-header"><span class="section-kicker">Fresh from your graph</span><span>tap a signal to peek</span></div><div class="stories" id="stories"></div><div class="feed-tabs-row"><div class="feed-tabs" id="tabs"></div><div class="sort-note"><span class="status-dot green"></span> ranked live</div></div><div id="feedList" class="feed-list"></div><button id="loadMore" class="button button-quiet load-more">Load more signals <span>↓</span></button></div><aside class="control-rail"><div class="rail-card dna-card"><div class="rail-heading"><div><span class="section-kicker">Your DNA</span><h3>What the twin remembers</h3></div><button class="icon-button" data-route="profile" aria-label="Edit DNA"><span class="icon icon-edit"></span></button></div><div id="interestChips" class="chip-cloud"></div><div class="hate-divider"><span>turning down</span></div><div id="hateChips" class="chip-cloud muted"></div><button id="resetDNA" class="text-button text-button-wide">Reset memory <span>↺</span></button></div><div class="rail-card diversity-card"><div class="rail-heading"><div><span class="section-kicker">Diversity guard</span><h3>Feed health</h3></div><span class="health-badge" id="healthBadge">Balanced</span></div><div class="diversity-meter"><div class="meter-track"><span id="diversityFill"></span><i id="diversityMarker"></i></div><div class="meter-scale"><span>echo chamber</span><b id="diversityScore">72</b><span>wide view</span></div></div><p id="diversityCopy">Your feed blends roles, schemes and people without losing your edge.</p></div><div class="rail-card ats-card"><div class="rail-heading"><div><span class="section-kicker">Resume twin</span><h3>Ready for a stronger yes?</h3></div><span class="mini-score">82</span></div><div class="ats-inline"><div class="mini-gauge" id="atsGauge"></div><div><strong id="atsScore">82%</strong><span>ATS match</span></div><button class="button button-small button-outline" data-route="resume">View</button></div><div class="skill-gap"><span class="status-dot orange"></span><span>Add <b>Docker</b> to move 82 → 94%</span></div></div><div class="rail-card digest-card"><div class="rail-heading"><div><span class="section-kicker">Daily digest</span><h3>Three good nudges</h3></div><span class="digest-time">09:20</span></div><div id="digestList" class="digest-list"></div></div></aside></div><div id="agentTrace" class="agent-trace" aria-live="polite"></div></section>
+
+          <section class="page" data-page="resume">
+            <div class="page-heading"><div><div class="section-kicker">Agent 01 · Profiler</div><h1>Build your <em>career twin.</em></h1><p>Drop a resume, get a grounded signal map — not another black-box score.</p></div><div class="heading-note"><span class="status-dot green"></span><span>local-first demo · no upload leaves this browser</span></div></div>
+            <div class="resume-layout"><div class="resume-upload-card panel-surface"><div class="card-topline"><span class="section-kicker">Twin builder</span><span class="step-counter">1 / 4</span></div><div class="upload-zone" id="uploadZone"><div class="upload-icon"><span class="icon icon-file"></span></div><h3>Drop your resume here</h3><p>PDF, DOCX or a brave first draft. We’ll turn it into a map you can edit.</p><input id="resumeFile" type="file" accept=".pdf,.doc,.docx" /><label for="resumeFile" class="button button-outline">Choose a file <span>↗</span></label><span class="file-name" id="fileName">No file selected</span></div><div class="loader-header"><span class="section-kicker">Multi-step loader</span><span id="loaderStatus">Waiting for your signal</span></div><div id="loaderSteps" class="loader-steps"></div><div class="resume-actions"><button id="parseBtn" class="button button-primary">Parse & score <span>↗</span></button><button id="addSql" class="button button-quiet">+ Add SQL gap</button></div><div class="resume-json-wrap"><div class="card-topline"><span class="section-kicker">Twin memory · editable JSON</span><button id="copyResumeJson" class="icon-button" aria-label="Copy twin JSON"><span class="icon icon-copy"></span></button></div><pre id="resumeJson">{
+  "resume": null,
+  "status": "waiting"
+}</pre></div></div><div class="resume-results"><div class="score-card panel-surface"><div class="score-card-copy"><span class="section-kicker">Your current signal</span><h2 id="scoreHeadline">Promising, with room to compound.</h2><p id="scoreSubline">A strong React base. One practical cloud skill unlocks more roles.</p><div class="score-meta"><span class="status-dot orange"></span><span>last parsed just now</span><span class="meta-separator">·</span><span id="atsDelta">+14 with Docker</span></div></div><div class="big-score-wrap"><div class="big-gauge" id="bigGauge"><div><strong id="bigScore">82</strong><span>/100</span></div></div><span>ATS twin</span></div></div><div class="insight-grid"><div class="insight-card"><div class="insight-icon green-icon">↗</div><span class="section-kicker">Strengths</span><h3>Signals to keep</h3><div id="resumeHighlights" class="insight-list"></div></div><div class="insight-card"><div class="insight-icon orange-icon">＋</div><span class="section-kicker">Skill gap</span><h3>The smallest unlock</h3><div class="gap-callout"><strong>Docker basics</strong><span>2 weeks · NPTEL / YouTube</span><b>82 → 94</b></div><button class="text-button">Open roadmap <span>↗</span></button></div></div><div class="cover-card panel-surface"><div class="card-topline"><div><span class="section-kicker">Agent 05 · Coach gap</span><h3>Cover letter, in your voice</h3></div><button id="copyCover" class="button button-small button-outline">Copy</button></div><textarea id="cover" aria-label="Generated cover letter">Hi team — I’m a React + Node builder from Nagpur who enjoys making useful, accessible products. I’m excited about the chance to bring that energy to the role while closing my Docker and cloud deployment gap.</textarea><div class="cover-footer"><span>Grounded in your twin, not a generic template.</span><button id="downloadTwin" class="text-button">Download twin <span>↓</span></button></div></div></div></div>
+          </section>
+
+          <section class="page" data-page="peers">
+            <div class="page-heading"><div><div class="section-kicker">Agent 04 · Social connector</div><h1>Meet your <em>nearby tribe.</em></h1><p>People, skills and warm paths around you — with distance and intent in plain sight.</p></div><button class="button button-primary" data-action="open-referral"><span class="icon icon-route"></span> Find a referral path</button></div>
+            <div class="peer-controls panel-surface"><div class="search-field"><span class="icon icon-search"></span><input id="peerSkill" placeholder="Search a skill, interest or role" /></div><select id="peerRadius" aria-label="Peer radius"><option value="5">within 5 km</option><option value="20" selected>within 20 km</option><option value="50">within 50 km</option></select><div class="control-divider"></div><button id="graphToggle" class="button button-quiet"><span class="icon icon-network"></span> <span id="graphToggleLabel">Graph view</span></button></div><div class="peer-summary"><div><span class="section-kicker">Signal around you</span><strong>12 warm connections</strong></div><div class="summary-pills"><span class="summary-pill"><b>4.2 km</b> closest match</span><span class="summary-pill"><b>3</b> referral-ready</span><span class="summary-pill"><b>86%</b> skill overlap</span></div></div><div id="peerGrid" class="peer-grid"></div><div class="graph-view panel-surface" id="graphView"><div class="card-topline"><div><span class="section-kicker">Network view</span><h3>You are closer than you think.</h3></div><span class="graph-legend"><i></i> you <i></i> peer <i></i> company</span></div><canvas id="graphCanvas" width="1100" height="380"></canvas></div></section>
+
+          <section class="page" data-page="schemes">
+            <div class="page-heading"><div><div class="section-kicker">Agent 03 · Eligibility scout</div><h1>Government support, <em>decoded.</em></h1><p>Useful schemes should feel discoverable — not like a maze of tabs and acronyms.</p></div><label class="toggle-label"><input id="eligibleOnly" type="checkbox" /><span class="toggle-track"></span><span>Show my best fit only</span></label></div><div class="scheme-banner panel-surface"><div class="banner-symbol">₹</div><div><span class="section-kicker">India green signal</span><h3>4 schemes mapped to your profile</h3><p>Eligibility is a guide, not a guarantee. We surface the missing proof before you apply.</p></div><button class="button button-outline" data-action="open-search">Search all schemes <span>⌘ K</span></button></div><div id="schemeGrid" class="scheme-grid"></div></section>
+
+          <section class="page" data-page="startups">
+            <div class="page-heading"><div><div class="section-kicker">Agent 02 · Opportunity matcher</div><h1>Build the next <em>useful thing.</em></h1><p>Ideas looking for a builder, a researcher, a designer or a first believer.</p></div><button id="newIdeaBtn" class="button button-primary"><span>＋</span> Post an idea</button></div><div class="startup-signal panel-surface"><div class="startup-orb">✦</div><div><span class="section-kicker">Startup bazaar</span><h3>Not every idea needs a pitch deck.</h3><p>Share a clear problem, find a complementary skill and make the first small move.</p></div><div class="startup-stats"><span><b>18</b> ideas</span><span><b>42</b> builders</span><span><b>7</b> forming teams</span></div></div><div id="newIdeaForm" class="new-idea-form panel-surface"><div class="card-topline"><div><span class="section-kicker">Create a signal</span><h3>What are you trying to make?</h3></div><button id="closeIdeaForm" class="icon-button" aria-label="Close idea form"><span class="icon icon-close"></span></button></div><div class="form-grid"><label><span>Idea title</span><input id="ideaTitle" placeholder="e.g. Voice-first tutor for Bharat" /></label><label><span>Skills needed</span><input id="ideaSkills" placeholder="React, LLM, Hindi" /></label></div><label class="form-full"><span>One clear paragraph</span><textarea id="ideaDesc" placeholder="What problem are you solving, and who is it for?"></textarea></label><div class="form-actions"><button id="createIdea" class="button button-primary">Publish + match <span>↗</span></button><span>We’ll match the idea with your twin, not a vanity metric.</span></div></div><div id="startupList" class="startup-list"></div></section>
+
+          <section class="page" data-page="recent">
+            <div class="page-heading"><div><div class="section-kicker">Agent 06 · Feed ranker</div><h1>The last <em>24 hours.</em></h1><p>Fresh roles, schemes and people worth a look before the signal gets noisy.</p></div><div class="live-stamp"><span class="status-dot green"></span> synced 8 min ago</div></div><div class="recent-toolbar panel-surface"><div class="recent-filter active">All signals <b>16</b></div><div class="recent-filter">Jobs <b>8</b></div><div class="recent-filter">Schemes <b>4</b></div><div class="recent-filter">People <b>4</b></div><span class="recent-note">freehire + MyScheme + your graph</span></div><div id="recentList" class="recent-list"></div></section>
+
+          <section class="page" data-page="profile">
+            <div class="page-heading"><div><div class="section-kicker">Your control room</div><h1>Edit the <em>memory.</em></h1><p>A healthy recommender gives you the controls back.</p></div><button id="saveProfile" class="button button-primary">Save changes <span>✓</span></button></div><div class="profile-layout"><div class="profile-main panel-surface"><div class="profile-identity"><div class="profile-avatar-large">SS</div><div><span class="section-kicker">Bharat builder</span><h2>Sudipta Samanta</h2><p>React · AI/ML · Product-minded · Nagpur</p></div><button class="button button-outline">Edit profile</button></div><div class="profile-fields"><label><span>Display name</span><input id="pName" value="Sudipta Samanta" /></label><label><span>Home base</span><input id="pCity" value="Nagpur" /></label></div><div class="memory-section"><div class="card-topline"><div><span class="section-kicker">Editable AI memory</span><h3>Keep the useful context</h3></div><span class="memory-count">6 memories</span></div><div id="memoryChips" class="memory-chip-grid"></div><div class="memory-add"><input id="memoryInput" placeholder="Add a goal, preference or boundary" /><button id="addMemory" class="button button-dark">Add <span>＋</span></button></div></div><div class="focus-settings"><div><span class="section-kicker">Default focus</span><h3>What should the feed optimise for?</h3></div><div class="focus-options"><button class="focus-option active" data-profile-focus="career"><span>↗</span><b>Career</b><small>roles + referrals</small></button><button class="focus-option" data-profile-focus="study"><span>◒</span><b>Study</b><small>skills + schemes</small></button><button class="focus-option" data-profile-focus="relax"><span>◌</span><b>Reset</b><small>wide view</small></button></div></div></div><aside class="profile-side"><div class="profile-side-card panel-surface"><span class="section-kicker">Memory log</span><h3>What changed this week</h3><div id="memoryLog" class="memory-log"></div></div><div class="profile-side-card panel-surface profile-callout"><div class="callout-icon">✦</div><h3>Your signal is yours.</h3><p>Likes add interest. Hides add boundaries. You can clear both at any time.</p><button id="clearMemory" class="text-button">Clear all memory <span>↺</span></button></div></aside></div></section>
+
+          <section class="page" data-page="admin">
+            <div class="page-heading"><div><div class="section-kicker">Simulation lab · demo admin</div><h1>Test the <em>feed, safely.</em></h1><p>See how steer, diversity and agent reasoning shape the result before real users do.</p></div><button data-action="open-simulation" class="button button-primary"><span class="icon icon-play"></span> Run simulation</button></div><div class="admin-stats"><div class="admin-stat panel-surface"><span class="section-kicker">Candidates ranked</span><strong id="statCandidates">1,248</strong><span class="stat-trend">↑ live feed trace</span></div><div class="admin-stat panel-surface"><span class="section-kicker">Ranker backend</span><strong id="modelBackend">rules fallback</strong><span id="modelVersion" class="stat-trend green-text">checking model…</span></div><div class="admin-stat panel-surface"><span class="section-kicker">NDCG@10</span><strong id="modelNdcg">—</strong><span id="modelRecall" class="stat-trend">temporal validation</span></div><div class="admin-stat panel-surface"><span class="section-kicker">Impression events</span><strong id="modelImpressions">—</strong><span class="stat-trend green-text">training-ready exposure log</span></div></div><div class="admin-grid"><div class="admin-chart panel-surface"><div class="card-topline"><div><span class="section-kicker">Feed quality over time</span><h3>Control creates trust.</h3></div><span class="chart-legend"><i></i> relevance <i></i> diversity</span></div><div class="quality-chart"><div class="chart-grid"></div><svg viewBox="0 0 800 240" role="img" aria-label="Feed quality chart"><path class="chart-line line-relevance" d="M20 190 C110 170 120 120 210 138 S300 160 370 102 S465 125 530 78 S620 94 700 44 S760 55 790 28"></path><path class="chart-line line-diversity" d="M20 215 C100 205 150 185 220 178 S330 165 395 182 S480 142 550 154 S650 116 720 126 S760 106 790 100"></path></svg><div class="chart-axis"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></div><div class="admin-sources panel-surface"><span class="section-kicker">Live sources</span><h3>What feeds the twin</h3><div class="source-meter"><div><span><i class="source-dot orange"></i>freehire roles</span><b>23,104</b></div><div class="source-bar"><span style="width:82%"></span></div></div><div class="source-meter"><div><span><i class="source-dot green"></i>India schemes</span><b>1,208</b></div><div class="source-bar green-bar"><span style="width:42%"></span></div></div><div class="source-meter"><div><span><i class="source-dot blue"></i>social graph</span><b>80k edges</b></div><div class="source-bar blue-bar"><span style="width:64%"></span></div></div><button id="syncBtn" class="button button-outline button-wide">Sync freehire now <span>↻</span></button></div></div></section>
+        </main>
+
+        <footer class="app-footer"><span><span class="status-dot green"></span> AgentFeed is running in local demo mode</span><span>built for Bharat · transparent by default</span></footer>
+      </div>
+    </div>
+
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
+    <div class="modal-layer" id="searchModal" aria-hidden="true">
+      <div class="modal-card search-modal-card" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+        <div class="search-modal-head"><div class="search-modal-title"><span class="icon icon-search"></span><span id="searchTitle">Search the network</span></div><button id="closeSearch" class="kbd-button">ESC</button></div>
+        <div class="search-modal-input"><span class="icon icon-search"></span><input id="searchInput" placeholder="Jobs, schemes, peers, ideas…" autocomplete="off" /></div>
+        <div class="search-tags" id="searchTags"><span>Jump to</span><button data-route="feed">For you</button><button data-route="schemes">Schemes</button><button data-route="peers">Nearby tribe</button><button data-route="startups">Startup bazaar</button></div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-modal-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+      </div>
+    </div>
+
+    <div class="modal-layer" id="shareSheet" aria-hidden="true">
+      <div class="modal-card share-modal-card" role="dialog" aria-modal="true" aria-labelledby="shareTitle">
+        <div class="modal-card-head"><div><span class="section-kicker">Share a useful signal</span><h2 id="shareTitle">Share this opportunity</h2></div><button id="closeShare" class="icon-button" aria-label="Close share sheet"><span class="icon icon-close"></span></button></div>
+        <div class="share-preview"><div class="share-preview-icon">✦</div><div><strong id="sharePreviewTitle">Bharat Career Twin</strong><span>Shared with context, not clickbait.</span></div></div>
+        <div class="share-actions"><button class="share-action whatsapp" data-share="wa"><span>◔</span><b>WhatsApp</b></button><button class="share-action linkedin" data-share="li"><span>in</span><b>LinkedIn</b></button><button class="share-action twitter" data-share="tw"><span>𝕏</span><b>Post</b></button></div>
+        <div class="copy-row"><div><span class="section-kicker">Link</span><input id="shareUrl" readonly value="https://bharatcareertwin.local/signal" /></div><button id="copyBtn" class="button button-dark">Copy link</button></div>
+        <div class="qr-block"><div class="qr-copy"><span class="section-kicker">Scan to open</span><h3>A little proof goes a long way.</h3><p>Download this QR and share the exact signal with your circle.</p><button id="downloadQr" class="button button-outline">Download QR <span>↓</span></button></div><div class="qr-frame"><canvas id="shareCanvas" width="160" height="160"></canvas><div id="qrFallback" class="qr-fallback">BCT</div></div></div>
+      </div>
+    </div>
+
+    <div class="modal-layer sheet-layer" id="explainSheet" aria-hidden="true">
+      <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="explainTitle"><div class="sheet-handle"></div><div class="modal-card-head"><div><span class="section-kicker">Transparent ranking</span><h2 id="explainTitle">Why you see this</h2></div><button id="closeExplain" class="button button-quiet">Close</button></div><div id="explainBody" class="explain-body"></div></div>
+    </div>
+
+    <div class="modal-layer" id="referralModal" aria-hidden="true">
+      <div class="modal-card referral-card" role="dialog" aria-modal="true" aria-labelledby="referralTitle"><div class="modal-card-head"><div><span class="section-kicker">Social connector · BFS 3 hops</span><h2 id="referralTitle">A warmer way in.</h2></div><button id="closeReferral" class="icon-button" aria-label="Close referral path"><span class="icon icon-close"></span></button></div><div id="referralPath" class="referral-path"></div><div class="referral-language"><button class="language-choice active" data-referral-language="hinglish">Hinglish</button><button class="language-choice" data-referral-language="english">English</button></div><div class="referral-message" id="referralMessage"></div><div class="referral-actions"><button id="copyReferral" class="button button-outline">Copy message</button><button id="referralShareBtn" class="button button-primary">Share path <span>↗</span></button></div></div>
+    </div>
+
+    <div class="modal-layer" id="simulationModal" aria-hidden="true">
+      <div class="modal-card simulation-card" role="dialog" aria-modal="true" aria-labelledby="simulationTitle"><div class="modal-card-head"><div><span class="section-kicker">Simulation sandbox</span><h2 id="simulationTitle">Try a different feed.</h2><p>Test a steer before it becomes memory.</p></div><button id="closeSimulation" class="icon-button" aria-label="Close simulation"><span class="icon icon-close"></span></button></div><label class="simulation-input"><span>Temporary steer</span><input id="simulationInput" value="more women in tech peers, fewer generic jobs" /></label><div class="simulation-presets"><button data-simulation="more local roles, less remote">local first</button><button data-simulation="more study and free courses">study sprint</button><button data-simulation="more founder ideas, less corporate">founder mode</button></div><button id="runSimulation" class="button button-dark button-wide">Preview the change <span>↗</span></button><div id="simulationResults" class="simulation-results"></div></div>
+    </div>
+
+    <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

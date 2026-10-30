@@ -1,0 +1,1 @@
+"""Scheduled ingest adapters."""

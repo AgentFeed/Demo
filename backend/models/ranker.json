@@ -1,0 +1,39 @@
+{
+  "model_type": "logistic_ranker",
+  "model_version": "logistic-v1",
+  "feature_names": [
+    "relevance",
+    "skill_overlap",
+    "location_match",
+    "social",
+    "freshness",
+    "popularity",
+    "eligibility",
+    "hate",
+    "referral",
+    "feedback",
+    "is_job"
+  ],
+  "weights": [
+    0.011593746879246388,
+    0.025404856587343486,
+    0.3094540306050437,
+    0.0,
+    0.0502796803058201,
+    0.48450588066646627,
+    0.0,
+    -0.16081150982788794,
+    -0.8276614005965065,
+    0.0,
+    -0.8276614005965065
+  ],
+  "bias": -1.021779657373327,
+  "trained_examples": 15692,
+  "metrics": {
+    "ndcg_at_10": 0.5581605252468742,
+    "recall_at_10": 0.8293843624406284,
+    "mrr": 0.49668737060041407,
+    "users": 391.0,
+    "examples": 3923.0
+  }
+}

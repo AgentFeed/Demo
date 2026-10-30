@@ -1,0 +1,8 @@
+item_id,title,skills,location,type,likes,saves,fresh_hours,has_referral,social_score,description
+j1,Frontend Developer React TS,React|TypeScript|Tailwind,Nagpur,job,124,42,2,1,0.8,Build customer-facing products
+j2,Data Scientist LLM RAG,Python|LLM|RAG,Bengaluru,job,210,98,5,1,0.6,Explore language systems
+j3,Backend Engineer Node Postgres,Node.js|Postgres|Docker,Pune,job,89,31,18,0,0.2,Own reliable APIs and data workflows
+j4,Data Analyst SQL PowerBI,SQL|PowerBI|Excel,Pune,job,54,18,28,0,0.3,Turn business questions into decisions
+j5,DevOps EngineerKubernetes,Kubernetes|Docker|AWS,Hyderabad,job,143,55,9,1,0.4,Make releases safer and faster
+j6,Product Designer Research,Figma|Research|Product,Mumbai,job,72,29,7,1,0.4,Make complex financial moments human
+j7,Local MERN Developer,React|Node.js|MongoDB,Nagpur,job,98,34,3,1,0.7,Ship modern web experiences
